@@ -1,0 +1,131 @@
+body{
+    margin: 0;
+}
+
+article{
+    background-color: lightgray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10%;
+}
+
+
+/* mobile */
+
+button{
+    padding: 10%;
+}
+
+.menu-button{
+    cursor: pointer;
+    display: inline;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-button i.material-icons{
+    font-size: 2.5rem;
+}
+
+#container {
+    height: 100vh;
+    background-color: aquamarine;
+    grid-template-rows: 10%;
+    display: grid;
+    grid-template-areas:
+    'n h h h'
+    'm m m m ' 
+    'm m m m ' 
+    'm m m m ' 
+    'm m m m '  
+    ;
+}
+    nav{
+        grid-area: n;
+        display: flex;
+        justify-content:space-between;
+        align-items: center;
+        background-color: rgb(123, 221, 188);
+    }
+    header{
+        grid-area: h;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 3em;
+        background-color: rgb(123, 221, 188);
+    }
+    
+    main#home{
+        grid-area: m;
+        display: grid;
+        grid-template-rows: 25%;
+        grid-template-areas: 
+        'sinput'
+        'slist'
+        ;
+    }
+    section.input{
+        grid-area: sinput;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+        section.list{
+            grid-area: slist;
+            display: grid;
+        }
+
+@media screen and (max-width:479px){
+    .aupp{
+        display: none;
+    }
+    .aleft{
+        display: none;
+    }
+    .aright{
+        display: none;
+    }
+    a{
+        display: none;
+    }
+}
+
+@media screen and (min-width:1024px){
+    #container {
+        grid-template-rows: 10% 5% 1fr 1fr;
+        grid-template-areas:
+        'h h h h'
+        'n n n n' 
+        'm m m m'
+        'm m m m'
+        ;
+    }
+        main#home{
+            grid-template-rows: 50%;
+            grid-template-areas: 
+            'sinput aupp'
+            'aleft aright'
+            ;
+        }
+        .aupp{
+            grid-area: aupp;
+            display: flex;
+        }
+        .aleft{
+            grid-area: aleft;
+            display: flex;
+        }
+        .aright{
+            grid-area: aright;
+            display: flex;
+        }
+        section.list{
+            display: none;
+        }
+        .menu-button{
+            display: none;
+        }
+}
