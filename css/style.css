@@ -17,13 +17,16 @@ button{
     padding: 10%;
 }
 
+
 .menu-button{
     cursor: pointer;
     display: inline;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: auto;
 }
+
 
 .menu-button i.material-icons{
     font-size: 2.5rem;
@@ -67,7 +70,8 @@ button{
         'slist'
         ;
     }
-    section.input{
+
+    article.input{
         grid-area: sinput;
         display: flex;
         justify-content: center;
@@ -77,6 +81,57 @@ button{
             grid-area: slist;
             display: grid;
         }
+
+    main#add{
+        grid-area: m;
+        display: grid;
+        grid-template-rows: 50%;
+    }
+        div.add{
+            cursor: pointer;
+            height: 100%;
+            display: flex;
+            margin: auto;
+            justify-content: center;
+            align-items: center;
+        }
+        #add article{
+            background-color: rgb(123, 221, 188);
+            height: 100%;
+            width: 100%;
+            margin: 0;
+            text-align: center;
+        }
+
+    .menu{
+        height: 100vh;
+        width: 80vw;
+        background-color:white;
+        position: fixed;
+        top: 0;
+        left: -90vw;
+        transition: left 0.3s;
+        box-shadow: 10px 0px 21px -10px rgba(0,0,0,0.75);
+        z-index: 10;
+    }
+    .show{
+        left: 0;
+    }
+
+    .fade-layer{
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0,0,0,0.5);
+        display: none;
+        z-index: 5;
+    }
+
+    .fade-layer.visible{
+        display: block;
+    }
 
 @media screen and (max-width:479px){
     .aupp{
@@ -88,10 +143,15 @@ button{
     .aright{
         display: none;
     }
-    a{
+    nav{
+        align-items: baseline;
+    }
+    nav.desk a{
         display: none;
     }
 }
+
+
 
 @media screen and (min-width:1024px){
     #container {
@@ -127,5 +187,11 @@ button{
         }
         .menu-button{
             display: none;
+        }
+        nav.menu a{
+            display: none;
+        }
+        a{
+            margin: 1%;
         }
 }
