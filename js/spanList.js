@@ -1,12 +1,15 @@
-// let module = require('./array.js');
-// let array = module.array;
-// console.log(array)
+
+function impList(){
+    let tmp = document.cookie
+    tmp = tmp.split(",") 
+    return tmp
+}
+
+produkter = impList()
+console.log(produkter);
+
+
 i = 0
-produkter = ["smör", "ost", "mjölk", "egg","dom här är automatiskt generearade"]
-// const mostOf = document.createTextNode(mostof)
-// document.querySelector(".most").appendChild(mostOf)
-
-
 while (produkter.length > i) {
     spannext(i)
     i += 1

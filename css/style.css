@@ -1,5 +1,11 @@
 body{
     margin: 0;
+    overflow: hidden;
+}
+
+img{
+    height: 100%;
+    width: 100%;
 }
 
 article{
@@ -8,6 +14,7 @@ article{
     justify-content: center;
     align-items: center;
     margin: 10%;
+    padding: 2%;
 }
 
 
@@ -70,13 +77,6 @@ button{
         'slist'
         ;
     }
-
-    article.input{
-        grid-area: sinput;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
         section.list{
             grid-area: slist;
             display: grid;
@@ -101,6 +101,41 @@ button{
             width: 100%;
             margin: 0;
             text-align: center;
+        }
+
+    main#list{
+        grid-area: m;
+    }
+        section.lista{
+            grid-area: m;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            }
+    
+    main#omOss{
+        grid-area: m;
+        display: grid;
+        grid-template-rows: 50%;
+        grid-template-columns: 50%;
+        grid-template-areas: 
+        'sl ar'
+        'al sr'
+        ;
+        }
+        section.mogel{
+            grid-area: sr;
+        }
+        section.fras{
+            grid-area: sl;
+        }
+        article.al{
+            grid-area: al;
+            margin: 0%;
+        }
+        article.ar{
+            grid-area: ar;
+            margin: 0%;
         }
 
     .menu{
@@ -131,7 +166,9 @@ button{
 
     .fade-layer.visible{
         display: block;
-    }
+    } 
+
+        
 
 @media screen and (max-width:479px){
     .aupp{
@@ -194,4 +231,5 @@ button{
         a{
             margin: 1%;
         }
+
 }
