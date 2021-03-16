@@ -1,6 +1,7 @@
 body{
     margin: 0;
     overflow: hidden;
+    font-family: 'OpenDyslexic',Arial, Helvetica, sans-serif;
 }
 
 img{
@@ -9,7 +10,7 @@ img{
 }
 
 article{
-    background-color: lightgray;
+    background-color:rgba(211, 211, 211, 0.6);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -18,10 +19,14 @@ article{
 }
 a{
     text-decoration: none;
-    color: black;
+    color: rgb(0, 0, 0);
     
 }
 
+@font-face{
+    font-family: "OpenDyslexic";
+    src: url(fonts/OPENDYSLEXIC-REGULAR.OTF);
+}
 
 /* mobile */
 
@@ -46,7 +51,7 @@ button{
 
 #container {
     height: 100vh;
-    background-color: aquamarine;
+    background-color: #7fffd4;
     grid-template-rows: 10%;
     display: grid;
     grid-template-areas:
@@ -99,7 +104,6 @@ button{
         #add article{
             background-color: rgb(123, 221, 188);
             height: 100%;
-            width: 100%;
             margin: 0;
             text-align: center;
         }
@@ -148,11 +152,28 @@ button{
             margin: 0%;
 
         }
+    main#remove{
+        grid-area: m;
+        display: grid;
+        grid-template-rows: 80%;
+        grid-template-areas: 
+        'sec'
+        'fot'
+        ;
+    }
+        section.rem{
+            grid-area: sec;
+        }
+        footer{
+            grid-area: fot;
+            background-color:rgb(123, 221, 188);
+            text-align: center;
+        }
 
     .menu{
         height: 100vh;
         width: 80vw;
-        background-color:rgb(123, 221, 188);
+        background-color:#7bddbc;
         position: fixed;
         top: 0;
         left: -90vw;
@@ -188,6 +209,9 @@ button{
     nav.desk a{
         display: none;
     }
+    aside{
+        display: none;
+    }
 
 }
 
@@ -210,18 +234,18 @@ button{
             'aleft aright'
             ;
         }
-        .aupp{
-            grid-area: aupp;
-            display: flex;
-        }
-        .aleft{
-            grid-area: aleft;
-            display: flex;
-        }
-        .aright{
-            grid-area: aright;
-            display: flex;
-        }
+            .aupp{
+                grid-area: aupp;
+                display: flex;
+            }
+            .aleft{
+                grid-area: aleft;
+                display: flex;
+            }
+            .aright{
+                grid-area: aright;
+                display: flex;
+            }
         section.list{
             display: none;
         }
@@ -240,6 +264,15 @@ button{
             grid-template-areas: 
             'sl ar'
             'al sr'
+        }
+        main#remove{
+            grid-area: m;
+            display: grid;
+            grid-template-rows: 80%;
+            grid-template-areas: 
+            'asl sec asr'
+            'asl fot asr'
+            ;
         }
             
 }
