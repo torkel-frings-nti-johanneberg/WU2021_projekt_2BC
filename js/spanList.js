@@ -1,8 +1,12 @@
 
 function impList(){
     let tmp = document.cookie
-    tmp = tmp.split(",") 
-    return tmp
+    if (tmp.length == 0){
+        return ["inga produkter"]
+    } else {
+        tmp = tmp.split(",") 
+        return tmp
+    }
 }
 
 produkter = impList()

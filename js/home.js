@@ -1,4 +1,15 @@
-var produkter = ["smör","ost","bröd"]
+function impList(){
+    let tmp = document.cookie
+    if (tmp.length == 0){
+        return ["inga produkter"]
+    } else {
+        tmp = tmp.split(",") 
+        return tmp
+    }
+}
+
+produkter = impList()
+console.log(produkter);
 
 // för tetsyfte ändast
 var lastexpier = produkter[Math.floor(Math.random()*produkter.length)];

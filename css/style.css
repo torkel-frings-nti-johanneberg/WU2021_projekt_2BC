@@ -16,6 +16,11 @@ article{
     margin: 10%;
     padding: 2%;
 }
+a{
+    text-decoration: none;
+    color: black;
+    
+}
 
 
 /* mobile */
@@ -72,10 +77,6 @@ button{
         grid-area: m;
         display: grid;
         grid-template-rows: 25%;
-        grid-template-areas: 
-        'sinput'
-        'slist'
-        ;
     }
         section.list{
             grid-area: slist;
@@ -111,16 +112,24 @@ button{
             display: flex;
             flex-wrap: wrap;
             flex-direction: column;
+            overflow: hidden;
+            }
+        
+            .lista article{
+                margin: 1%;
             }
     
     main#omOss{
         grid-area: m;
+        height: 100vh;
         display: grid;
-        grid-template-rows: 50%;
-        grid-template-columns: 50%;
+        grid-template-rows: repeat(4, 23%);
+        
         grid-template-areas: 
-        'sl ar'
-        'al sr'
+        'sl'
+        'ar'
+        'sr'
+        'al'
         ;
         }
         section.mogel{
@@ -132,16 +141,18 @@ button{
         article.al{
             grid-area: al;
             margin: 0%;
+
         }
         article.ar{
             grid-area: ar;
             margin: 0%;
+
         }
 
     .menu{
         height: 100vh;
         width: 80vw;
-        background-color:white;
+        background-color:rgb(123, 221, 188);
         position: fixed;
         top: 0;
         left: -90vw;
@@ -171,21 +182,13 @@ button{
         
 
 @media screen and (max-width:479px){
-    .aupp{
-        display: none;
-    }
-    .aleft{
-        display: none;
-    }
-    .aright{
-        display: none;
-    }
     nav{
         align-items: baseline;
     }
     nav.desk a{
         display: none;
     }
+
 }
 
 
@@ -231,5 +234,12 @@ button{
         a{
             margin: 1%;
         }
-
+        main#omOss{
+            grid-template-columns: 50% 50%;
+            grid-template-rows: 43% 43%;
+            grid-template-areas: 
+            'sl ar'
+            'al sr'
+        }
+            
 }
