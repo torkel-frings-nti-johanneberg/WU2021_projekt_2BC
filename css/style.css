@@ -162,7 +162,16 @@ button{
         ;
     }
         section.rem{
-            grid-area: sec;
+        grid-area: sec;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        overflow: hidden;
+        }
+    
+        .rem article{
+            margin: 1%;
+            /* cursor:pointer; */
         }
         footer{
             grid-area: fot;

@@ -12,7 +12,6 @@ function impList(){
 produkter = impList()
 console.log(produkter);
 
-
 i = 0
 while (produkter.length > i) {
     spannext(i)
