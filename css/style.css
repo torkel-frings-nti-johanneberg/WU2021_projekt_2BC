@@ -20,7 +20,6 @@ article{
 a{
     text-decoration: none;
     color: rgb(0, 0, 0);
-    
 }
 
 @font-face{
@@ -34,7 +33,6 @@ button{
     padding: 10%;
 }
 
-
 .menu-button{
     cursor: pointer;
     display: inline;
@@ -43,7 +41,6 @@ button{
     align-items: center;
     margin: auto;
 }
-
 
 .menu-button i.material-icons{
     font-size: 2.5rem;
@@ -182,7 +179,7 @@ button{
     .menu{
         height: 100vh;
         width: 80vw;
-        background-color:#7bddbc;
+        background-color:rgb(123, 221, 188);
         position: fixed;
         top: 0;
         left: -90vw;
@@ -238,11 +235,16 @@ button{
     }
         main#home{
             grid-template-rows: 50%;
+            grid-template-columns: 50%;
             grid-template-areas: 
             'sinput aupp'
             'aleft aright'
             ;
-        }
+        }   
+            .input{
+                grid-area: sinput;
+                display: flex;
+            }
             .aupp{
                 grid-area: aupp;
                 display: flex;
@@ -282,6 +284,5 @@ button{
             'asl sec asr'
             'asl fot asr'
             ;
-        }
-            
+        }     
 }

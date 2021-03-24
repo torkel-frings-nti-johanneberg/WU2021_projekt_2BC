@@ -5,6 +5,8 @@ function impList(){
     let tmp = document.cookie
     if (tmp.length == 0){
         return []
+    } else if (tmp.split(",")[0] == "inga produkter"){
+        return []
     } else {
         tmp = tmp.split(",") 
         return tmp
