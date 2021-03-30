@@ -36,8 +36,15 @@
         <header><a href="index.html">Matlistan</a></header>
         <main id="add">
             <section>
+                
                 <div class="add">
-                    Lägg till 1 produkt
+                    <form id="addprod" autocomplete="on">
+                    <label for="prduktnamn">Namn på  produkten:</label><br>
+                    <input type="text" id="prduktnamn" name="prduktnamn" required><br>
+                    <label for="expodate">Bäst före:</label><br>
+                    <input type="date" id="expodate" name="2021-03-26" required>
+                </form>
+                <p> Lägg till produkt</p>
                 </div>
             </section>
             <article>
@@ -47,6 +54,5 @@
     </div>
     <script src="js/main.js"></script>
     <script src="js/addProdukt.js"></script>
-</body>
 </body>
 </html>

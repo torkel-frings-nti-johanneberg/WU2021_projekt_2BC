@@ -91,7 +91,7 @@ button{
         grid-template-rows: 50%;
     }
         div.add{
-            cursor: pointer;
+            flex-direction: column;
             height: 100%;
             display: flex;
             margin: auto;
@@ -103,6 +103,12 @@ button{
             height: 100%;
             margin: 0;
             text-align: center;
+        }
+        .add p{
+            background-color:rgb(123, 221, 188);
+            padding: 1%;
+            border-radius: 25%;
+            cursor: pointer;
         }
 
     main#list{
