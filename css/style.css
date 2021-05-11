@@ -334,6 +334,7 @@ button{
         }    
         main#butiker{
             grid-area: m;
+            margin-top: 0;
             display: grid;
             grid-gap: 10px;
             grid-template-columns: 50% 50%;
@@ -351,6 +352,10 @@ button{
                 margin: 0;
                 height: 50%;
                 background-color: rgba(211, 211, 211,0.6);
+            }
+            #butiker img{
+                height: 65%;
+                width: auto;
             }
             #butiker p{
                 overflow:visible;
@@ -372,5 +377,6 @@ button{
                 overflow: hidden;
 
             }
+            
 
 }
